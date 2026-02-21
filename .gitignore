@@ -1,0 +1,21 @@
+# CMake build artifacts
+cmake-build-*/
+build/
+out/
+
+# CLion IDE files
+.idea/
+*.iml
+
+# Compiled outputs
+*.o
+*.a
+*.dylib
+*.so
+
+# OS files
+.DS_Store
+
+# Test outputs
+Testing/
+*.log
