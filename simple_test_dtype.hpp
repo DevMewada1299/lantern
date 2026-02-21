@@ -1,9 +1,12 @@
-// test_dtype_simple.cpp (in the root directory for now)
+// test_dtype_simple.cpp
 #include <iostream>
-#include "minitorch/core/dtype.hpp"
+#include "lantern/core/dtype.hpp"
+//        ^^^^^^^ changed
 
 int main() {
-    using namespace mt;
+    using namespace lantern;  // changed from mt
+
+    std::cout << "=== Dtype Tests ===\n\n";
 
     // Test 1: element_size at compile time
     constexpr size_t f32_size = element_size(ScalarType::Float32);
@@ -22,5 +25,6 @@ int main() {
     F32Type value = 3.14f;
     std::cout << "Type trait test, value: " << value << "\n";
 
+    std::cout << "\n✅ All dtype tests passed!\n";
     return 0;
 }

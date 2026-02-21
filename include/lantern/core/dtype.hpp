@@ -12,7 +12,7 @@
 #include <stdexcept>
 #include <string>
 
-namespace mt {
+namespace lantern {
     enum class ScalarType : uint8_t {
         Float32  = 0,
         Float64  = 1,

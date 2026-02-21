@@ -1,4 +1,4 @@
-# MiniTorch
+# Project Lantern
 
 A PyTorch-like deep learning tensor library in C++ for Apple Silicon from Scratch.
 
