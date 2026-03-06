@@ -1,12 +1,18 @@
 cmake_minimum_required(VERSION 3.20)
-project(Lantern VERSION 0.1.0 LANGUAGES CXX OBJCXX)
+project(Lantern LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Include directories
-include_directories(${CMAKE_SOURCE_DIR}/include)
+# Library with compiled sources
+add_library(lantern STATIC
+        src/core/allocator.cpp
+)
 
-# Library will be added incrementally
-# add_library(lantern STATIC ...)
+target_include_directories(lantern
+        PUBLIC ${CMAKE_SOURCE_DIR}/include
+)
+
+target_compile_features(lantern
+        PUBLIC cxx_std_20
+)
